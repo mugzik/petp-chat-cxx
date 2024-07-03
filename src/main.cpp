@@ -1,6 +1,6 @@
 ﻿// Chat.cpp: определяет точку входа для приложения.
 //
-#include "main.h"
+#include <iostream>
 
 using namespace std;
 

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
-set(${PROJECT_NAME} Chat)
+set(PROJECT_NAME Chat)
 
 project(${PROJECT_NAME})
 
@@ -11,3 +11,5 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(${PROJECT_NAME} 
         src/main.cpp 
         )
+
+target_include_directories(${PROJECT_NAME} PRIVATE include)
