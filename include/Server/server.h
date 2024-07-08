@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>;
+#include "Network/socket.h"
 
 class Server {
 
@@ -14,6 +15,7 @@ private:
 	std::map<int, int> connections;
 
 // socket
+	IndSocket* socket;
 
 // state?
 
