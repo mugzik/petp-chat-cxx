@@ -7,10 +7,10 @@
 #endif
 
 
-IndSocket* IndSocket::createSocket(int af, int type, int protocol)
+IndSocket* IndSocket::createSocket()
 {
 #if defined(_WIN32) || defined(_WIN64)
-	return dynamic_cast<IndSocket*>(new WinSocket(af, type, protocol));
+	return dynamic_cast<IndSocket*>(new WinSocket());
 #elif defined(unix)
 // Unix implementation
 #endif

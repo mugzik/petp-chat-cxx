@@ -7,6 +7,7 @@ class Server {
 
 public:
 	Server();
+	void Start();
 
 private:
 // What we should have here
@@ -16,6 +17,9 @@ private:
 
 // socket
 	IndSocket* socket;
+
+// port
+// ipaddr
 
 // state?
 

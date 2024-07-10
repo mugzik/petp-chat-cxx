@@ -16,6 +16,8 @@ add_executable(${PROJECT_NAME}
         include/Network/socket.h
         src/Network/winsocket.cpp
         include/Network/winsocket.h
+        src/Network/ipaddr.cpp
+        include/Network/ipaddr.h
         )
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
