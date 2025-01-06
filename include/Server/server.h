@@ -1,25 +1,27 @@
 #pragma once
 
-#include <map>;
-#include "Network/socket.h"
+#include <memory>
+#include <thread>
+#include <vector>
+#include <string>
+#include "Network/winsocket.h"
 
 class Server {
 
 public:
 	Server();
-	void Start();
+	Server(int port, const char * address);
+	void start();
 
 private:
-// What we should have here
-
 // connections list
-	std::map<int, int> connections;
+	std::vector<std::jthread> connections;
 
 // socket
-	IndSocket* socket;
+	WinSocket socket;
 
-// port
-// ipaddr
+	int port = 5000;
+	std::string address = "127.0.0.1";
 
 // state?
 

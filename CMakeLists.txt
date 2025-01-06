@@ -12,8 +12,8 @@ add_executable(${PROJECT_NAME}
         src/main.cpp
         src/Server/server.cpp
         include/Server/server.h
-        src/Network/socket.cpp
-        include/Network/socket.h
+        src/Server/clientprocessor.cpp
+        include/Server/clientprocessor.h
         src/Network/winsocket.cpp
         include/Network/winsocket.h
         src/Network/ipaddr.cpp

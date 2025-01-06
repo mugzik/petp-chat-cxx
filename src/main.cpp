@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "Network/ipaddr.h"
+#include "Server/server.h"
 
 using namespace std;
 
@@ -33,7 +34,6 @@ int main(int argc, char* argv[])
 		std::cout << ex.what() << std::endl;
 	}
 
-
 	for (int i = 1; i < argc; i++)
 	{
 		if (argv[i] == "-c")
@@ -43,6 +43,8 @@ int main(int argc, char* argv[])
 		else
 		{
 			std::cout << "run server side";
+			auto server = Server();
+			server.start();
 		}
 	}
 

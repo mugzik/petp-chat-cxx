@@ -1,17 +1,26 @@
 #pragma once
+
+#include <memory>
+
 #include <WinSock2.h>
 #include <WS2tcpip.h>
 
-#include "socket.h"
 
-class WinSocket : public IndSocket {
+class WinSocket {
 public:
 	WinSocket() : a_socket(INVALID_SOCKET) {};
+	WinSocket(SOCKET socket) : a_socket(socket) {};
+	~WinSocket() = default;
+
+	void open();
 	void open(int af, int type, int protocol);
 	void close();
-	void bind();
+	void bind(int port, const char* addr);
 	void write();
 	void read();
+	void listen();
+	bool isValid();
+	WinSocket accept();
 
 	void logError( const char* message );
 
